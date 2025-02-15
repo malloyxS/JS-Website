@@ -1,7 +1,8 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
-*{
-    font-family: 'Smooch', sans-serif; /* Семейство шрифтов  */
+
+* {
+    font-family: 'Smooch', sans-serif; /* Семейство шрифтов */
     margin: 0; /* Величина отступа от каждого края элемента */
     padding: 0; /* Внутренний отступ от края элемента до вложенной в него информации */
     box-sizing: border-box; /* Рамочки */
@@ -10,7 +11,8 @@
     scroll-padding-top: 2rem; /* не даёт размещать информацию на отступе от краёв на 2rem сверхую 1rem - 16 пикселей */
     scroll-behavior: smooth; /* плавное прокручивание на сайте */
 }
-:root{ /* Свойства для HTML и SVG */
+
+:root { /* Свойства для HTML и SVG */
     --green-color: #00a550;
     --light-green-color: #b2ec5d;
     --orange-color: #FFA500;
@@ -25,16 +27,15 @@ img {
 
 body {
     color: var(--text-color);
-
 }
 
-header{
-    position: fixed; /*фиксировнно в одном месте*/
+header {
+    position: fixed; /* фиксировнно в одном месте */
     width: 100%;
     top: 0;
     right: 0;
     z-index: 1000;
-    display: flex; /*Показывает как должны отображаться элементы в документе*/
+    display: flex; /* Показывает как должны отображаться элементы в документе */
     align-items: center;
     justify-content: space-between;
     background-color: var(--bg-color);
@@ -43,30 +44,30 @@ header{
     transition: 0.5s;
 }
 
-section{
-    padding: 4,5rem 0 1.5rem;
-
+section {
+    padding: 4.5rem 0 1.5rem;
 }
 
-.profile{
+.profile {
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
     cursor: pointer;
 }
-.profile img{
+
+.profile img {
     width: 40px;
     height: 40px;
     object-fit: cover;
     border-radius: 50%;
 }
 
-.profile span{
+.profile span {
     font-size: 15px;
     font-weight: 500;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     font-size: 1.1rem;
@@ -75,16 +76,27 @@ section{
     column-gap: 0.5rem;
 }
 
-.logo .bx{
+.logo .bx {
     font-size: 24px;
     color: var(--orange-color);
 }
-.navbar{
-    display: flex;
-    column-gap: 0.5rem;
+
+.navbar {
+    display: flex; /* Горизонтальное выравнивание */
+    gap: 15px; /* Отступы между элементами */
 }
 
-.navbar a{
+.navbar ul {
+    display: flex; /* Убедимся, что список также отображается гибко */
+    padding: 0; /* Убираем отступы списка */
+    margin: 0; /* Убираем маргина у списка */
+}
+
+.navbar li {
+    margin: 0 10px; /* Отступы между элементами списка */
+}
+
+.navbar a {
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-color);
@@ -92,52 +104,48 @@ section{
 }
 
 .navbar a:hover,
-.navbar .home-active{
+.navbar .home-active {
     background: var(--green-color);
     border-radius: 5rem;
     color: var(--bg-color);
     transition: background 0.5s;
+    width: 100%; /* Занимает всю ширину родителя, чтобы выделяться */
 }
 
-#menu-icon{
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10001;
-    display: none;
-}
-
-.container{
-    position: relative; /*Определяет позиционирование элемента относительно его стандартного местоположения на странице*/
+/* Остальные стили остаются без изменений */
+.container {
+    position: relative; /* Определяет позиционирование элемента относительно его стандартного местоположения на странице */
     width: 100%;
     min-height: 640px;
     display: flex;
     align-items: center;
-    background-repeat: no-repeat; /*Не повторяется БГ*/
-    background-size: cover; /*Покрывает всё пространство*/
+    background-repeat: no-repeat; /* Не повторяется БГ */
+    background-size: cover; /* Покрывает всё пространство */
     background-position: center;
-    overflow: hidden; /*Скрывает часть содержимого, которое не поместилось в контейнере*/
-    background: url(/IT-web/Image/backgroundIT.jpg);
-    
+    overflow: hidden; /* Скрывает часть содержимого, которое не поместилось в контейнере */
+    background: url(/IMG/cafepic3.jpg);
 }
 
-.container img{
+.container img {
     width: 400px;
     position: absolute;
     bottom: 0;
     right: 200px;
 }
 
-.home-text{
+.home-text {
     padding: 0 150px;
     top: 200px;
     position: absolute;
 }
-.home-text span{
+
+.home-text span {
     font-weight: 400;
     text-transform: uppercase;
     color: var(--green-color);
 }
-.home-text h1{
+
+.home-text h1 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
